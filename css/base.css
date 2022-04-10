@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Source+Sans+Pro:wght@400;900&display=swap');
+
+
 :root {
 
     --buzz-color-1 : rgb(217,226,255);
@@ -12,7 +15,7 @@
 
 
 html {
-    overflow: hidden;
+    overflow-y: hidden;
     background-color: var(--buzz-color-2);
 }
 
@@ -70,4 +73,22 @@ html {
     color: var(--buzz-color-4);
     border: 1px solid var(--buzz-color-4);
     box-shadow: -3px -3px 5px white,3px 3px 5px var(--buzz-color-3);
+}
+
+/* layout */
+
+.buzz-layout {
+    display: grid;
+    
+    grid-template-columns: 28% 44% 28%;
+    height: 84vh;
+}
+
+/* padding */
+.buzz-p-container {
+    padding: 30px;
+}
+.buzz-plr-container {
+    padding-left: 30px;
+    padding-right: 30px;
 }

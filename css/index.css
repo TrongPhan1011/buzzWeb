@@ -11,9 +11,11 @@
 }
 
 .buzz-team-name {
-    font-family: 'Montserrat';
-    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 45px;
     font-weight: 800;
+    position: absolute;
+    z-index: 10;
 }
 
 .buzz-bd-radius-2{
@@ -21,7 +23,7 @@
 }
 
 .buzz-btn-check {
-    width: 50px;
+    width: 47px;
     height: 25px;
 }
 .buzz-chk-circle {
@@ -31,16 +33,25 @@
 
 .buzz-item-team {
     text-align: center;
-    /* line-height: 150px; */
-    font-size: 150px;
-    font-variant: inherit;
-    font-weight: bolder;
+    line-height: 140px;
+    height: 50%;
+    font-size: 200px;
+    
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
     color: var(--buzz-color-4);
 }
 
 .btn-minus-plus{
     background-color: var(--buzz-color-5);
     border: none;
+}
+
+.buzz-pos-re-hidden {
+    position: relative;
+    z-index: -1;
+    opacity: 0;
+    
 }
 
 
