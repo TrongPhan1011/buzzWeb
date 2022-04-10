@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
 
 :root {
 
@@ -31,6 +30,10 @@ html {
 .buzz-bg-5{
     background-color: var(--buzz-color-5);
 }
+.buzz-bg-4{
+    background-color: var(--buzz-color-4);
+}
+
 
 
 /* Border */
@@ -39,6 +42,9 @@ html {
 }
 .buzz-bd-radius-circle {
     border-radius: 50%;
+}
+.buzz-bd-hover {
+
 }
 
 

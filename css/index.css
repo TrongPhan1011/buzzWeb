@@ -16,4 +16,31 @@
     font-weight: 800;
 }
 
+.buzz-bd-radius-2{
+    border-radius: 20px;
+}
+
+.buzz-btn-check {
+    width: 50px;
+    height: 25px;
+}
+.buzz-chk-circle {
+    width: 19px;
+    height: 19px;
+}
+
+.buzz-item-team {
+    text-align: center;
+    /* line-height: 150px; */
+    font-size: 150px;
+    font-variant: inherit;
+    font-weight: bolder;
+    color: var(--buzz-color-4);
+}
+
+.btn-minus-plus{
+    background-color: var(--buzz-color-5);
+    border: none;
+}
+
 
