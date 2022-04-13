@@ -14,7 +14,11 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 45px;
     font-weight: 800;
-    position: absolute;
+    
+}
+
+.buzz-pos-on {
+    position: relative;
     z-index: 10;
 }
 
