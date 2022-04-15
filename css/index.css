@@ -18,7 +18,15 @@
     z-index: 10;
 }
 
-.buzz-bd-radius-2{
+.buzz-period {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    position: relative;
+    z-index: 10;
+}
+
+.buzz-bd-radius-2 {
     border-radius: 20px;
 }
 
@@ -26,6 +34,7 @@
     width: 47px;
     height: 25px;
 }
+
 .buzz-chk-circle {
     width: 19px;
     height: 19px;
@@ -36,22 +45,119 @@
     line-height: 140px;
     height: 50%;
     font-size: 200px;
-    
+
     font-weight: 600;
     font-family: 'Source Sans Pro', sans-serif;
     color: var(--buzz-color-4);
 }
 
-.btn-minus-plus{
+.btn-minus-plus {
     background-color: var(--buzz-color-5);
     border: none;
 }
+
+.buzz-btn-attack-left {
+    border: none;
+    background-color: var(--buzz-color-2);
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+
+    border-right: 60px solid var(--buzz-color-3);
+}
+
+.buzz-btn-attack-right {
+    border: none;
+    background-color: var(--buzz-color-2);
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+
+    border-left: 60px solid var(--buzz-color-3);
+}
+
 
 .buzz-pos-re-hidden {
     position: relative;
     z-index: -1;
     opacity: 0;
-    
+
 }
 
 
+
+.buzz-btn-group button {
+    text-align: center;
+    background-color: var(--buzz-color-5);
+    border: 1px solid var(--buzz-color-3);
+    color: var(--buzz-color-4);
+    padding: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+/* Clear floats (clearfix hack) */
+.buzz-btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.buzz-btn-group button:not(:last-child) {
+    border-right: none;
+    /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.buzz-btn-group button:hover {
+    border: 1px solid var(--buzz-color-4);
+
+}
+
+
+
+.buzz-btn-24s {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    text-align: center;
+    background-color: var(--buzz-color-5);
+    border: none;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--buzz-color-4);
+    font-size: 110px;
+}
+
+.buzz-btn-24s:hover {
+    border: 1px solid var(--buzz-color-4);
+
+
+}
+
+#buzz-btn-14s {
+    border-bottom-left-radius: 40px;
+    font-weight: 450;
+    font-size: 130%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+}
+
+#buzz-btn-reset {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0, 0);
+    border-bottom-right-radius: 40px;
+    font-weight: 450;
+    font-size: 130%;
+}
+
+.buzz-btn-time {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--buzz-color-4);
+
+}

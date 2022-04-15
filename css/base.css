@@ -1,14 +1,13 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Source+Sans+Pro:wght@400;900&display=swap');
 
 
 :root {
 
-    --buzz-color-1 : rgb(217,226,255);
-    --buzz-color-2 : rgb(217,228,251);
-    --buzz-color-3 : rgb(187,205,247);
-    --buzz-color-4 : rgb(103,103,158);
-    --buzz-color-5 : rgb(245,249,255);
+    --buzz-color-1: rgb(217, 226, 255);
+    --buzz-color-2: rgb(217, 228, 251);
+    --buzz-color-3: rgb(187, 205, 247);
+    --buzz-color-4: rgb(103, 103, 158);
+    --buzz-color-5: rgb(245, 249, 255);
 
 
 }
@@ -22,32 +21,40 @@ html {
 .buzz-container {
     height: 100vh;
     width: 100vw;
-    
+
 }
 
 
 /* Background */
-.buzz-bg-2{
+.buzz-bg-2 {
     background-color: var(--buzz-color-2);
 }
-.buzz-bg-5{
+
+.buzz-bg-5 {
     background-color: var(--buzz-color-5);
 }
-.buzz-bg-4{
+
+.buzz-bg-4 {
     background-color: var(--buzz-color-4);
 }
 
 
 
 /* Border */
-.buzz-bd-radius-1{
+.buzz-bd-radius-1 {
     border-radius: 20px;
 }
+
 .buzz-bd-radius-circle {
     border-radius: 50%;
 }
-.buzz-bd-hover {
 
+.buzz-bd-hover {}
+
+.buzz-period-bd-radius {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--buzz-color-5);
 }
 
 
@@ -66,20 +73,39 @@ html {
     width: 3vw;
     color: var(--buzz-color-3);
     background-color: var(--buzz-color-5);
-    box-shadow: -3px -3px 5px white,3px 3px 5px var(--buzz-color-2);
+    box-shadow: -3px -3px 5px white, 3px 3px 5px var(--buzz-color-2);
     border: none;
 }
+
+
+
 .buzz-btn:hover {
     color: var(--buzz-color-4);
     border: 1px solid var(--buzz-color-4);
-    box-shadow: -3px -3px 5px white,3px 3px 5px var(--buzz-color-3);
+    box-shadow: -3px -3px 5px white, 3px 3px 5px var(--buzz-color-3);
 }
+
+.buzz-btn-countdown {
+    width: 100%;
+    border-radius: 50px;
+    color: var(--buzz-color-3);
+    background-color: var(--buzz-color-5);
+    border: none;
+    text-align: center;
+
+    font-size: 160px;
+    font-weight: 520;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--buzz-color-4);
+}
+
+
 
 /* layout */
 
 .buzz-layout {
     display: grid;
-    
+
     grid-template-columns: 28% 44% 28%;
     height: 84vh;
 }
@@ -88,6 +114,7 @@ html {
 .buzz-p-container {
     padding: 30px;
 }
+
 .buzz-plr-container {
     padding-left: 30px;
     padding-right: 30px;
