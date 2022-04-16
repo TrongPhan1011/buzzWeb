@@ -56,3 +56,16 @@ btnReset.onclick = function () {
     tamDung();
     document.getElementById("buzz-24s").innerHTML = 24;
 }
+
+var left = document.getElementById('attack-left');
+var right = document.getElementById('attack-right');
+left.onclick = function () {
+    left.setAttribute("style", "border-right: 60px solid var(--buzz-color-4);");
+    right.setAttribute("style", "border-left: 60px solid var(--buzz-color-3);");
+}
+
+
+right.onclick = function () {
+    left.setAttribute("style", "border-right: 60px solid var(--buzz-color-3);");
+    right.setAttribute("style", "border-left: 60px solid var(--buzz-color-4);");
+}

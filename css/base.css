@@ -14,7 +14,7 @@
 
 
 html {
-    overflow-y: hidden;
+    overflow: hidden;
     background-color: var(--buzz-color-2);
 }
 
@@ -69,8 +69,8 @@ html {
 /* button */
 .buzz-btn {
     border-radius: 50%;
-    height: 3vw;
-    width: 3vw;
+    height: 3.5vw;
+    width: 3.5vw;
     color: var(--buzz-color-3);
     background-color: var(--buzz-color-5);
     box-shadow: -3px -3px 5px white, 3px 3px 5px var(--buzz-color-2);
@@ -100,6 +100,16 @@ html {
 }
 
 
+.buzz-btn-2 {
+    height: 3vw;
+    width: 3vw;
+}
+
+.buzz-btn-3 {
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
 
 /* layout */
 
@@ -110,6 +120,28 @@ html {
     height: 84vh;
 }
 
+.buzz-overflow {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--buzz-color-3);
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--buzz-color-1);
+    border-radius: 30px;
+}
+
+
+
 /* padding */
 .buzz-p-container {
     padding: 30px;
@@ -118,4 +150,14 @@ html {
 .buzz-plr-container {
     padding-left: 30px;
     padding-right: 30px;
+}
+
+/* height */
+.buzz-h-40 {
+    height: 40%;
+    max-height: 200px
+}
+
+.buzz-h-10 {
+    height: 10%;
 }
