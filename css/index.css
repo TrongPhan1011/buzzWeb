@@ -19,6 +19,7 @@
 
 .buzz-pos-on {
     position: relative;
+   
     z-index: 10;
 }
 

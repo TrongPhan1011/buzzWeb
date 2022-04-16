@@ -48,7 +48,7 @@ function handleClickCheck(chk, lbCircle, blockContent, btnPlus) {
             s += `
             <div class="row m-0  w-100 buzz-overflow pr-3 pl-3">
                 <div class="col-3 p-1 d-flex justify-content-center ">
-                    <button type="btn" class="buzz-btn buzz-btn-2"> 3 </button>
+                    <button type="btn" class="buzz-btn"> 3 </button>
                 </div>
                 <div class="col-9 p-1  d-flex justify-content-between align-items-center">
                     <button type="btn" class="buzz-btn buzz-btn-3"> 1 </button>
@@ -108,7 +108,7 @@ function clickPlus() {
             blockContent.innerHTML = blockContent.innerHTML + `
             <div class="row m-0  w-100 buzz-overflow pr-3 pl-3">
                 <div class="col-3 p-1 d-flex justify-content-center ">
-                    <button type="btn" class="buzz-btn buzz-btn-2"> 3 </button>
+                    <button type="btn" class="buzz-btn "> 3 </button>
                 </div>
                 <div class="col-9 p-1  d-flex justify-content-between align-items-center">
                     <button type="btn" class="buzz-btn buzz-btn-3"> 1 </button>
@@ -125,3 +125,22 @@ function clickPlus() {
     }
 }
 clickPlus();
+
+
+
+function clickOpenFile(){
+    for(let i=1;i<3;i++){
+
+        const lb = document.getElementById('lb-'+i);
+        const input = document.getElementById('imgupload-'+i);
+        
+        lb.onclick = function(event){
+            event.preventDefault();
+        }
+        lb.ondblclick = function (){
+            input.click();
+        }
+    }
+
+}
+clickOpenFile();
