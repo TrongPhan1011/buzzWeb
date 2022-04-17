@@ -96,7 +96,7 @@ html {
     border: none;
     text-align: center;
 
-    font-size: 160px;
+    font-size: 150px;
     font-weight: 520;
     font-family: 'Source Sans Pro', sans-serif;
     color: var(--buzz-color-4);
@@ -169,8 +169,10 @@ html {
 
 /* height */
 .buzz-h-40 {
+
     
     max-height: 230px;
+
 }
 
 .buzz-h-10 {

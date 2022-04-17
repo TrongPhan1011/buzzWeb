@@ -28,7 +28,7 @@
         <div class="row h-90  m-0 buzz-layout bg-demo" >
             <div class=" w-100 h-100 p-4 buzz-bd-radius-1 buzz-bg-5 d-flex flex-column justify-content-between">
                 <input type="file" id="imgupload-1" style="display:none" />
-                <label for='imgupload-1' style="height: 35%; width: 100%;" id="lb-1" >
+                <label for='imgupload-1' style="height: 35%; width: 100%;" id="lb-1">
                     <img src="../assets/img/imgDemo.png" alt="imgTeam" width="100%" height="100%">
                 </label>
                 <div class="row m-0 w-100   buzz-pos-on" style="height: 10%;">
@@ -74,12 +74,13 @@
                     <div class="buzz-period-bd-radius buzz-period buzz-text-color-4 pl-4 pr-4">PERIOD 1
                     </div>
                 </div>
-                <div style="height: 28%;"
+                <div style="height: 23%;"
                     class="row d-flex justify-content-center m-0 buzz-btn-countdown align-items-center">
-                    <button onclick="thoiGianTranDau(600)" style="line-height : 50px;max-height: 100px; "
-                        class="buzz-btn-time "><span id="soPhut">10</span>:<span id="soGiay">00</span></button>
+                    <input id="chk-dongho" type="checkbox" hidden><label for="chk-dongho"></label>
+                    <button id="buzz-DongHo" style="line-height : 50px;max-height: 100px; " class="buzz-btn-time "><span
+                            id="soPhut">10</span>:<span id="soGiay">0</span></button>
                 </div>
-                <div class="row mt-2 d-inline justify-content-between flex-column " style="height: 28%;">
+                <div class="row  d-inline justify-content-between flex-column  " style="height: 28%;">
                     <div class="row m-0">
                         <div class="col-3 p-0 d-flex align-items-center justify-content-end mt-5">
                             <button type="button" class="buzz-btn-attack-left" id="attack-left"></button>
@@ -118,24 +119,25 @@
 
             <div class=" w-100 h-100 p-4 buzz-bd-radius-1 buzz-bg-5 d-flex flex-column justify-content-between">
                 <input type="file" id="imgupload-2" style="display:none" />
-                <label for='imgupload-2' style="height: 35%; width: 100%;" id="lb-2"> 
-                    <img src="../assets/img/imgDemo.png" alt="imgTeam"width="100%" height="100%">
+                <label for='imgupload-2' style="height: 35%; width: 100%;" id="lb-2">
+                    <img src="../assets/img/imgDemo.png" alt="imgTeam" width="100%" height="100%">
                 </label>
                 <div class="row m-0 w-100   buzz-pos-on" style="height: 10%;">
                     <div class="col-3"></div>
                     <div class="col-6 text-center">
-                        <h1 class="buzz-team-name buzz-text-color-4 m-0" >AWAY</h1>
+                        <h1 class="buzz-team-name buzz-text-color-4 m-0">AWAY</h1>
                     </div>
-                    <div class="col-3 p-0  d-flex justify-content-center flex-column align-items-end"> 
+                    <div class="col-3 p-0  d-flex justify-content-center flex-column align-items-end">
                         <input id="chk-2" type="checkbox" hidden>
-                        <label id="lb-circle-2" for="chk-2" class="m-0 d-flex align-items-center  p-1 buzz-bd-radius-2 buzz-bg-2 buzz-btn-check ">
-                            <div  class="buzz-bd-radius-circle buzz-bg-5 buzz-chk-circle "></div>
+                        <label id="lb-circle-2" for="chk-2"
+                            class="m-0 d-flex align-items-center  p-1 buzz-bd-radius-2 buzz-bg-2 buzz-btn-check ">
+                            <div class="buzz-bd-radius-circle buzz-bg-5 buzz-chk-circle "></div>
                         </label>
                     </div>
                 </div>
-                <div id="block-content-2" class="row m-0  d-flex justify-content-between  " style="height: 55%;"  >
-                   
-                    
+                <div id="block-content-2" class="row m-0  d-flex justify-content-between  " style="height: 55%;">
+
+
                 </div>
                 <div id="btn-plus-2" class="row m-0 buzz-h-10">
                     <div class="col-12 d-flex justify-content-center align-items-end">
@@ -145,11 +147,11 @@
                     </div>
                 </div>
 
-                
-    
-    
-    
-    
+
+
+
+
+
             </div>
 
         </div>

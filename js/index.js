@@ -131,16 +131,16 @@ clickPlus();
 
 
 
-function clickOpenFile(){
-    for(let i=1;i<3;i++){
+function clickOpenFile() {
+    for (let i = 1; i < 3; i++) {
 
-        const lb = document.getElementById('lb-'+i);
-        const input = document.getElementById('imgupload-'+i);
-        
-        lb.onclick = function(event){
+        const lb = document.getElementById('lb-' + i);
+        const input = document.getElementById('imgupload-' + i);
+
+        lb.onclick = function (event) {
             event.preventDefault();
         }
-        lb.ondblclick = function (){
+        lb.ondblclick = function () {
             input.click();
         }
     }
