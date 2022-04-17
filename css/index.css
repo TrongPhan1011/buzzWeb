@@ -66,8 +66,8 @@
     background-color: var(--buzz-color-2);
     width: 0;
     height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
 
     border-right: 60px solid var(--buzz-color-3);
 }
@@ -77,8 +77,8 @@
     background-color: var(--buzz-color-2);
     width: 0;
     height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
 
     border-left: 60px solid var(--buzz-color-3);
 }
