@@ -19,7 +19,7 @@
 
 .buzz-pos-on {
     position: relative;
-   
+
     z-index: 10;
 }
 
@@ -96,7 +96,7 @@
 .buzz-btn-group button {
     text-align: center;
     background-color: var(--buzz-color-5);
-    border: 2px solid var(--buzz-color-3);
+    border: none;
     color: var(--buzz-color-4);
     padding: 10px;
     cursor: pointer;
@@ -117,7 +117,7 @@
 
 /* Add a background color on hover */
 .buzz-btn-group button:hover {
-    border: 2px solid var(--buzz-color-4);
+    border: 1px solid var(--buzz-color-4);
 
 }
 
@@ -137,7 +137,7 @@
 }
 
 .buzz-btn-24s:hover {
-    border: 2px solid var(--buzz-color-4);
+    border: 1px solid var(--buzz-color-4);
 
 
 }
@@ -146,13 +146,10 @@
     border-bottom-left-radius: 40px;
     font-weight: 450;
     font-size: 130%;
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
-    border-left: 2px solid rgba(0, 0, 0, 0);
 }
 
 #buzz-btn-reset {
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
-    border-right: 2px solid rgba(0, 0, 0, 0);
+
     border-bottom-right-radius: 40px;
     font-weight: 450;
     font-size: 130%;
