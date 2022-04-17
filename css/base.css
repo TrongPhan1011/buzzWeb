@@ -8,6 +8,7 @@
     --buzz-color-3: rgb(187, 205, 247);
     --buzz-color-4: rgb(103, 103, 158);
     --buzz-color-5: rgb(245, 249, 255);
+    
 
 
 }
@@ -37,6 +38,7 @@ html {
 .buzz-bg-4 {
     background-color: var(--buzz-color-4);
 }
+
 
 
 
@@ -82,6 +84,7 @@ html {
 .buzz-btn:hover {
     color: var(--buzz-color-4);
     border: 1px solid var(--buzz-color-4);
+    background-color: rgba(217, 226, 255,0.2);
     box-shadow: -3px -3px 5px white, 3px 3px 5px var(--buzz-color-3);
 }
 
@@ -118,6 +121,7 @@ html {
 
     grid-template-columns: 28% 44% 28%;
     height: 84vh;
+    /* height: 60vw; */
 }
 
 .buzz-overflow {
@@ -125,20 +129,31 @@ html {
     overflow-x: hidden;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--buzz-color-2);
+.buzz-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: var(--buzz-color-3);
+    border-radius: 30px;
+}
+.buzz-scroll:hover::-webkit-scrollbar-track {
+    background-color: var(--buzz-color-1);
     border-radius: 30px;
 }
 
+/* ::-webkit-scrollbar-thumb {
+    background-color: var(--buzz-color-3);
+    border-radius: 30px;
+} */
+
 ::-webkit-scrollbar {
+    opacity: 0;
+    background: transparent;
     width: 6px;
 
 }
-
-::-webkit-scrollbar-track {
-    background-color: var(--buzz-color-5);
-    border-radius: 30px;
+::-webkit-scrollbar:hover {
+    opacity: 1;
 }
+
+
 
 
 
@@ -155,9 +170,9 @@ html {
 /* height */
 .buzz-h-40 {
     
-    max-height: 200px;
+    max-height: 230px;
 }
 
 .buzz-h-10 {
-    height: 20%;
+    height: 13%;
 }

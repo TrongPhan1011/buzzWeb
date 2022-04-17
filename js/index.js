@@ -1,24 +1,25 @@
-function handleClickCheck(chk, lbCircle, blockContent, btnPlus) {
+function handleClickCheck(chk, blockContent, btnPlus,i) {
     if (!chk.checked) {
         blockContent.classList.remove('buzz-h-40');
         blockContent.classList.remove('buzz-overflow');
         blockContent.classList.add('h-100');
+       
         btnPlus.classList.add('d-none');
         blockContent.innerHTML = `
-            <div id="" class="row m-0 w-100" style="70%">
+            <div id="" class="row m-0  w-100" style="height : 170px" >
                 <div  class="col-1 p-0 d-flex align-items-center ">
-                    <button type="button"  class="btn-minus-plus"><i class="fas fa-minus-circle buzz-text-color-4" style="font-size: 25px;"></i></button>
+                    <button id="btn-home-minus-${i}" type="button"  class="btn-minus-plus"><i class="fas fa-minus-circle buzz-text-color-4" style="font-size: 25px;"></i></button>
                     
                 </div>
-                <div class="col-10 p-0 buzz-item-team" >
+                <div id="txtItemTeam-${i}" class="col-10 p-0 pt-2 buzz-item-team" >
                     00
                 </div>
-                <div class="col-1 p-0 d-flex align-items-center justify-content-end ">
-                    <button type="button" class="btn-minus-plus"><i class="fas fa-plus-circle buzz-text-color-4" style="font-size: 25px;"></i></button>
+                <div class="col-1 p-0 d-flex align-items-center justify-content-end " >
+                    <button id="btn-home-plus-${i}" type="button" class="btn-minus-plus"><i class="fas fa-plus-circle buzz-text-color-4" style="font-size: 25px;"></i></button>
                     
                 </div>
             </div>
-            <div class="row m-0 " style="height:30%">
+            <div class="row m-0  " style="height:35%">
                 <div class="row m-0  w-100 d-flex justify-content-between" style="font-size: 22px;">
                     <button class="buzz-btn" style="font-size: 20px;">1</button>
                     <button class="buzz-btn">2</button>
@@ -42,13 +43,15 @@ function handleClickCheck(chk, lbCircle, blockContent, btnPlus) {
         blockContent.classList.add('buzz-h-40');
         blockContent.classList.add('buzz-overflow');
         blockContent.classList.remove('h-100');
+        
         btnPlus.classList.remove('d-none');
         let s = '';
         for (let i = 0; i < 5; i++) {
             s += `
-            <div class="row m-0  w-100 buzz-overflow pr-3 pl-3">
+            
+            <div class="row m-0  w-100 buzz-overflow pr-3 pl-3 ">
                 <div class="col-3 p-1 d-flex justify-content-center ">
-                    <button type="btn" class="buzz-btn"> 3 </button>
+                    <button type="btn" class="buzz-btn buzz-btn-2"> 3 </button>
                 </div>
                 <div class="col-9 p-1  d-flex justify-content-between align-items-center">
                     <button type="btn" class="buzz-btn buzz-btn-3"> 1 </button>
@@ -87,10 +90,10 @@ function clickCheck() {
                 lbCircle.classList.remove('justify-content-end');
                 lbCircle.classList.remove('buzz-bg-4');
             }
-            handleClickCheck(chk, lbCircle, blockContent, btnPlus);
+            handleClickCheck(chk, blockContent, btnPlus,i);
 
         }
-        handleClickCheck(chk, lbCircle, blockContent, btnPlus);
+        handleClickCheck(chk, blockContent, btnPlus,i);
     }
 }
 
@@ -108,7 +111,7 @@ function clickPlus() {
             blockContent.innerHTML = blockContent.innerHTML + `
             <div class="row m-0  w-100 buzz-overflow pr-3 pl-3">
                 <div class="col-3 p-1 d-flex justify-content-center ">
-                    <button type="btn" class="buzz-btn "> 3 </button>
+                    <button type="btn" class="buzz-btn  buzz-btn-2"> 3 </button>
                 </div>
                 <div class="col-9 p-1  d-flex justify-content-between align-items-center">
                     <button type="btn" class="buzz-btn buzz-btn-3"> 1 </button>
@@ -144,3 +147,38 @@ function clickOpenFile(){
 
 }
 clickOpenFile();
+
+
+
+function clickBtnHomePlus(){
+    for(let i = 1; i<3;i++){
+        let btnPlus = document.getElementById("btn-home-plus-"+i);
+        let txtItemTeam = document.getElementById(`txtItemTeam-${i}`);
+        btnPlus.onclick = function (){
+            if(parseInt(txtItemTeam.innerHTML) < 9){
+                let number = (parseInt(txtItemTeam.innerHTML)  + 1)
+                txtItemTeam.innerHTML = "0" + number ;
+            }
+            else txtItemTeam.innerHTML =  parseInt(txtItemTeam.innerHTML) + 1;
+        }
+    }
+}
+clickBtnHomePlus();
+
+function clickBtnHomeMinus(){
+    for(let i = 1; i<3;i++){
+        let btnMinus = document.getElementById("btn-home-minus-"+i);
+        let txtItemTeam = document.getElementById(`txtItemTeam-${i}`);
+        btnMinus.onclick = function (){
+            if(parseInt(txtItemTeam.innerHTML) < 1){
+                txtItemTeam.innerHTML = "00";
+            }
+            else if(parseInt(txtItemTeam.innerHTML) < 9){
+                    let number = (parseInt(txtItemTeam.innerHTML)  - 1)
+                    txtItemTeam.innerHTML = "0" + number ;
+                }
+                else txtItemTeam.innerHTML =  parseInt(txtItemTeam.innerHTML) - 1;
+        }
+    }
+}
+clickBtnHomeMinus();
