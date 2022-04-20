@@ -87,6 +87,12 @@ html {
     background-color: rgba(217, 226, 255,0.2);
     box-shadow: -3px -3px 5px white, 3px 3px 5px var(--buzz-color-3);
 }
+.buzz-btn-click{
+    color: var(--buzz-color-4);
+    border: 1px solid var(--buzz-color-4);
+    background-color: rgba(217, 226, 255,0.2);
+    box-shadow: -3px -3px 5px white, 3px 3px 5px var(--buzz-color-3);
+}
 
 .buzz-btn-countdown {
     width: 100%;

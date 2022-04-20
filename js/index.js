@@ -1,10 +1,82 @@
-function handleClickCheck(chk, blockContent, btnPlus,i) {
+
+
+function handleClickBtn(id) {
+    let btn = document.getElementById(id);
+    btn.ondblclick = function () {
+        btn.classList.add('buzz-btn-click');
+    }
+}
+
+function clickListHomeNumber(position){
+    for (let i = 0; i < 5; i++) {
+        handleClickBtn(`btn-home-number${position}-${i}`);
+        
+    }
+}
+function getListHomeNumber(position) {
+    let s = '';
+    for (let i = 0; i < 5; i++) {
+        let temp = i + 1;
+        s = s + ` <button id="btn-home-number${position}-${i}" class="buzz-btn">${temp}</button> `;
+    }
+    return s;
+}
+
+
+function getList60s(position) {
+    let s = '';
+    for (let i = 0; i < 5; i++) {
+        
+        if(i==0||i==4){
+            s = s + `  <div id="btn-60s${position}-${i}" class="buzz-btn buzz-pos-re-hidden" >60s</div> `;
+
+        }
+        else {
+            s = s + `<button id="btn-60s${position}-${i}" class="buzz-btn ">60s</button>`
+        }
+
+    }
+    return s;
+}
+
+function clickList60s(position){
+    for (let i = 0; i < 5; i++) {
+        handleClickBtn(`btn-60s${position}-${i}`);
+        
+    }
+}
+
+
+
+// function getListHomeNumber60s(){
+//     let s= '';
+//     for(let i =0; i<5;i++){
+//         let temp = i++
+//         s = s + `<button id="btn-home-number-${i}" class="buzz-btn">${temp}</button>`;
+//         let btnNumber = document.getElementById(`btn-home-number-${i}`);
+//         handleClickBtn(btnNumber);
+//     }
+//     return s;
+// }
+
+
+
+
+
+
+function handleClickCheck(chk, blockContent, btnPlus, i) {
     if (!chk.checked) {
         blockContent.classList.remove('buzz-h-40');
         blockContent.classList.remove('buzz-overflow');
         blockContent.classList.add('h-100');
-       
+
         btnPlus.classList.add('d-none');
+
+        let s = '';
+       
+        let listNumber = getListHomeNumber(i);
+        let list60s = getList60s(i);
+
         blockContent.innerHTML = `
             <div id="" class="row m-0  w-100" style="height : 170px" >
                 <div  class="col-1 p-0 d-flex align-items-center ">
@@ -21,29 +93,24 @@ function handleClickCheck(chk, blockContent, btnPlus,i) {
             </div>
             <div class="row m-0  " style="height:35%">
                 <div class="row m-0  w-100 d-flex justify-content-between" style="font-size: 22px;">
-                    <button class="buzz-btn" style="font-size: 20px;">1</button>
-                    <button class="buzz-btn">2</button>
-                    <button class="buzz-btn">3</button>
-                    <button class="buzz-btn">4</button>
-                    <button class="buzz-btn">5</button>
+                `+ listNumber + `
+                    
                 </div>
                 <div class="row pt-3 m-0   w-100 d-flex justify-content-between">
-                    <div class="buzz-btn buzz-pos-re-hidden" >60s</div>
-                    <button class="buzz-btn ">60s</button>
-                    <button class="buzz-btn ">60s</button>
-                    <button class="buzz-btn ">60s</button>
-                    <div class="buzz-btn buzz-pos-re-hidden"  >60s</div>
+                    `+list60s+`
                 
                 </div>
             </div>  
         `
+        clickListHomeNumber(i);
+        clickList60s(i);
 
     }
     else {
         blockContent.classList.add('buzz-h-40');
         blockContent.classList.add('buzz-overflow');
         blockContent.classList.remove('h-100');
-        
+
         btnPlus.classList.remove('d-none');
         let s = '';
         for (let i = 0; i < 5; i++) {
@@ -68,6 +135,8 @@ function handleClickCheck(chk, blockContent, btnPlus,i) {
         }
         blockContent.innerHTML = s;
     }
+
+
 }
 
 
@@ -89,12 +158,19 @@ function clickCheck() {
             else {
                 lbCircle.classList.remove('justify-content-end');
                 lbCircle.classList.remove('buzz-bg-4');
+
             }
-            handleClickCheck(chk, blockContent, btnPlus,i);
+            handleClickCheck(chk, blockContent, btnPlus, i);
+            clickBtnHomeMinus();
+            clickBtnHomePlus();
+
+
 
         }
-        handleClickCheck(chk, blockContent, btnPlus,i);
+        handleClickCheck(chk, blockContent, btnPlus, i);
     }
+
+
 }
 
 clickCheck();
@@ -150,34 +226,41 @@ clickOpenFile();
 
 
 
-function clickBtnHomePlus(){
-    for(let i = 1; i<3;i++){
-        let btnPlus = document.getElementById("btn-home-plus-"+i);
+function clickBtnHomePlus() {
+    for (let i = 1; i < 3; i++) {
+        let btnPlus = document.getElementById("btn-home-plus-" + i);
         let txtItemTeam = document.getElementById(`txtItemTeam-${i}`);
-        btnPlus.onclick = function (){
-            if(parseInt(txtItemTeam.innerHTML) < 9){
-                let number = (parseInt(txtItemTeam.innerHTML)  + 1)
-                txtItemTeam.innerHTML = "0" + number ;
+        if (btnPlus != null) {
+
+            btnPlus.onclick = function () {
+                if (parseInt(txtItemTeam.innerHTML) < 9) {
+                    let number = (parseInt(txtItemTeam.innerHTML) + 1)
+                    txtItemTeam.innerHTML = "0" + number;
+                }
+                else txtItemTeam.innerHTML = parseInt(txtItemTeam.innerHTML) + 1;
             }
-            else txtItemTeam.innerHTML =  parseInt(txtItemTeam.innerHTML) + 1;
         }
     }
 }
 clickBtnHomePlus();
 
-function clickBtnHomeMinus(){
-    for(let i = 1; i<3;i++){
-        let btnMinus = document.getElementById("btn-home-minus-"+i);
+function clickBtnHomeMinus() {
+    for (let i = 1; i < 3; i++) {
+        let btnMinus = document.getElementById("btn-home-minus-" + i);
         let txtItemTeam = document.getElementById(`txtItemTeam-${i}`);
-        btnMinus.onclick = function (){
-            if(parseInt(txtItemTeam.innerHTML) < 1){
-                txtItemTeam.innerHTML = "00";
-            }
-            else if(parseInt(txtItemTeam.innerHTML) < 9){
-                    let number = (parseInt(txtItemTeam.innerHTML)  - 1)
-                    txtItemTeam.innerHTML = "0" + number ;
+
+        if (btnMinus != null) {
+
+            btnMinus.onclick = function () {
+                if (parseInt(txtItemTeam.innerHTML) < 1) {
+                    txtItemTeam.innerHTML = "00";
                 }
-                else txtItemTeam.innerHTML =  parseInt(txtItemTeam.innerHTML) - 1;
+                else if (parseInt(txtItemTeam.innerHTML) < 9) {
+                    let number = (parseInt(txtItemTeam.innerHTML) - 1)
+                    txtItemTeam.innerHTML = "0" + number;
+                }
+                else txtItemTeam.innerHTML = parseInt(txtItemTeam.innerHTML) - 1;
+            }
         }
     }
 }
