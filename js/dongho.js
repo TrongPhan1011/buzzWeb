@@ -9,7 +9,6 @@ function bienDoiSoGiay(thoiLuongPhut, thoiLuongGiay) {
 
     return thoiLuongPhut * 60 + thoiLuongGiay;
 }
-
 dongHo.onclick = function thoiGianTranDau() {
     thoiLuong = 0;
     thoiLuongPhut = parseInt(document.getElementById('soPhut').innerHTML);
@@ -20,7 +19,6 @@ dongHo.onclick = function thoiGianTranDau() {
 
     clearTimeout(stopWatchThiDau);
     demNguoc();
-
     tanCong24s();
 }
 
@@ -29,9 +27,13 @@ function demNguoc() {
     thoiLuong--;
     soPhut = Math.floor(thoiLuong / 60);
     soGiay = thoiLuong % 60;
+
+    soPhut = soPhut < 10 ? "0" + soPhut : soPhut;
+    soGiay = soGiay < 10 ? "0" + soGiay : soGiay;
     //dien vao so phut va so giay 
     document.getElementById("soPhut").innerHTML = soPhut;
     document.getElementById("soGiay").innerHTML = soGiay;
+
 
     if (thoiLuong > 0)
         stopWatchThiDau = setTimeout(demNguoc, 1000);
@@ -47,6 +49,7 @@ function tanCong24s() {
 function demNguocTanCong() {
     thoiLuongTanCong--;
     soGiay = thoiLuongTanCong % 60;
+    soGiay = soGiay < 10 ? "0" + soGiay : soGiay;
     //dien vao so giay 
     document.getElementById("buzz-24s").innerHTML = soGiay;
 
