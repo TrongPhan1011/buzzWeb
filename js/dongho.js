@@ -3,13 +3,30 @@
 var thoiLuong = 0;
 var stopWatchThiDau;
 var stopWatchTanCong;
-var dongHo = document.getElementById('buzz-DongHo');
+
 
 function bienDoiSoGiay(thoiLuongPhut, thoiLuongGiay) {
 
     return thoiLuongPhut * 60 + thoiLuongGiay;
 }
-dongHo.onclick = function thoiGianTranDau() {
+function chayTranDau() {
+    let dongHo = document.getElementById('buzz-DongHo');
+    let chkDongHo = document.getElementById('chk-dongho');
+    dongHo.onclick = function () {
+        chkDongHo.click();
+        if (chkDongHo.checked) {
+            thoiGianTranDau();
+        }
+        else {
+            tamDungTranDau();
+            tamDungTanCong();
+        }
+    }
+}
+
+function thoiGianTranDau() {
+
+
     thoiLuong = 0;
     thoiLuongPhut = parseInt(document.getElementById('soPhut').innerHTML);
     thoiLuongGiay = parseInt(document.getElementById('soGiay').innerHTML);
@@ -21,7 +38,7 @@ dongHo.onclick = function thoiGianTranDau() {
     demNguoc();
     tanCong24s();
 }
-
+chayTranDau();
 
 function demNguoc() {
     thoiLuong--;
@@ -94,13 +111,6 @@ right.onclick = function () {
     right.setAttribute("style", "border-left: 60px solid var(--buzz-color-4);");
 }
 
-const checkDongHo = document.getElementById('chk-dongho');
+function timeOut() {
 
-checkDongHo.onclick = function chayTranDau() {
-    if (!checkDongHo) {
-        tamDungTranDau();
-    }
-    else {
-        thoiGianTranDau();
-    }
 }
