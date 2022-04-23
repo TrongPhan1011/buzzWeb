@@ -1,9 +1,17 @@
 
 
+function getInputNumber(id){
+    return  `<input type="checkbox" id="${"chk-"+id}" style="display:none" />`;
+}
+
 function handleClickBtn(id) {
     let btn = document.getElementById(id);
+    let inputBtn = document.getElementById("chk-"+id);
     btn.ondblclick = function () {
-        btn.classList.add('buzz-btn-click');
+        inputBtn.click();
+        if(inputBtn.checked)
+            btn.classList.add('buzz-btn-click');
+        else btn.classList.remove('buzz-btn-click');
     }
 }
 
@@ -17,7 +25,8 @@ function getListHomeNumber(position) {
     let s = '';
     for (let i = 0; i < 5; i++) {
         let temp = i + 1;
-        s = s + ` <button id="btn-home-number${position}-${i}" class="buzz-btn">${temp}</button> `;
+        let inputBtnNumber = getInputNumber(`btn-home-number${position}-${i}`);
+        s = s + ` <button id="btn-home-number${position}-${i}" class="buzz-btn">${temp}</button> ` + inputBtnNumber;
     }
     return s;
 }
@@ -32,7 +41,8 @@ function getList60s(position) {
 
         }
         else {
-            s = s + `<button id="btn-60s${position}-${i}" class="buzz-btn ">60s</button>`
+            let inputBtnNumber = getInputNumber(`btn-60s${position}-${i}`);
+            s = s + `<button id="btn-60s${position}-${i}" class="buzz-btn ">60s</button>` + inputBtnNumber;
         }
 
     }
@@ -45,24 +55,6 @@ function clickList60s(position){
         
     }
 }
-
-
-
-// function getListHomeNumber60s(){
-//     let s= '';
-//     for(let i =0; i<5;i++){
-//         let temp = i++
-//         s = s + `<button id="btn-home-number-${i}" class="buzz-btn">${temp}</button>`;
-//         let btnNumber = document.getElementById(`btn-home-number-${i}`);
-//         handleClickBtn(btnNumber);
-//     }
-//     return s;
-// }
-
-
-
-
-
 
 function handleClickCheck(chk, blockContent, btnPlus, i) {
     if (!chk.checked) {
@@ -179,6 +171,10 @@ clickCheck();
 
 function clickPlus() {
     for (let i = 1; i < 3; i++) {
+
+
+
+
         const btnPlus = document.getElementById('btn-plus-' + i);
         const blockContent = document.getElementById('block-content-' + i);
 
