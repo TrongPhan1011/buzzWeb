@@ -1,11 +1,12 @@
 
 
-function getInputNumber(id){
-    return  `<input type="checkbox" id="${"chk-"+id}" style="display:none" />`;
+function getInputNumber(id) {
+    return `<input type="checkbox" id="${"chk-" + id}" style="display:none" />`;
 }
 
 function handleClickBtn(id) {
     let btn = document.getElementById(id);
+
     let inputBtn = document.getElementById("chk-"+id);
 
 
@@ -16,13 +17,14 @@ function handleClickBtn(id) {
         
         
         btn.classList.remove('buzz-btn-click');
+
     }
 }
 
-function clickListHomeNumber(position){
+function clickListHomeNumber(position) {
     for (let i = 0; i < 5; i++) {
         handleClickBtn(`btn-home-number${position}-${i}`);
-        
+
     }
 }
 function getListHomeNumber(position) {
@@ -39,8 +41,8 @@ function getListHomeNumber(position) {
 function getList60s(position) {
     let s = '';
     for (let i = 0; i < 5; i++) {
-        
-        if(i==0||i==4){
+
+        if (i == 0 || i == 4) {
             s = s + `  <div id="btn-60s${position}-${i}" class="buzz-btn buzz-pos-re-hidden" >60s</div> `;
 
         }
@@ -53,10 +55,10 @@ function getList60s(position) {
     return s;
 }
 
-function clickList60s(position){
+function clickList60s(position) {
     for (let i = 0; i < 5; i++) {
         handleClickBtn(`btn-60s${position}-${i}`);
-        
+
     }
 }
 
@@ -69,7 +71,7 @@ function handleClickCheck(chk, blockContent, btnPlus, i) {
         btnPlus.classList.add('d-none');
 
         let s = '';
-       
+
         let listNumber = getListHomeNumber(i);
         let list60s = getList60s(i);
 
@@ -93,7 +95,7 @@ function handleClickCheck(chk, blockContent, btnPlus, i) {
                     
                 </div>
                 <div class="row pt-3 m-0   w-100 d-flex justify-content-between">
-                    `+list60s+`
+                    `+ list60s + `
                 
                 </div>
             </div>  

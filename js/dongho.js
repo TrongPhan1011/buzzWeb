@@ -3,13 +3,30 @@
 var thoiLuong = 0;
 var stopWatchThiDau;
 var stopWatchTanCong;
-var dongHo = document.getElementById('buzz-DongHo');
+
 
 function bienDoiSoGiay(thoiLuongPhut, thoiLuongGiay) {
 
     return thoiLuongPhut * 60 + thoiLuongGiay;
 }
-dongHo.onclick = function thoiGianTranDau() {
+function chayTranDau() {
+    let dongHo = document.getElementById('buzz-DongHo');
+    let chkDongHo = document.getElementById('chk-dongho');
+    dongHo.onclick = function () {
+        chkDongHo.click();
+        if (chkDongHo.checked) {
+            thoiGianTranDau();
+        }
+        else {
+            tamDungTranDau();
+            tamDungTanCong();
+        }
+    }
+}
+
+function thoiGianTranDau() {
+
+
     thoiLuong = 0;
     thoiLuongPhut = parseInt(document.getElementById('soPhut').innerHTML);
     thoiLuongGiay = parseInt(document.getElementById('soGiay').innerHTML);
@@ -21,7 +38,7 @@ dongHo.onclick = function thoiGianTranDau() {
     demNguoc();
     tanCong24s();
 }
-
+chayTranDau();
 
 function demNguoc() {
     thoiLuong--;
@@ -44,6 +61,7 @@ function tanCong24s() {
     thoiLuongTanCong = document.getElementById('buzz-24s').innerHTML;
     clearTimeout(stopWatchTanCong);
     demNguocTanCong();
+
 }
 
 function demNguocTanCong() {
@@ -55,6 +73,7 @@ function demNguocTanCong() {
 
     if (thoiLuongTanCong > 0)
         stopWatchTanCong = setTimeout(demNguocTanCong, 1000);
+
 
 
 }
@@ -70,6 +89,7 @@ function tamDungTranDau() {
 
 var btn14s = document.getElementById('buzz-btn-14s');
 btn14s.onclick = function () {
+    tamDungTranDau();
     tamDungTanCong();
     document.getElementById("buzz-24s").innerHTML = 14;
 }
@@ -86,21 +106,15 @@ var right = document.getElementById('attack-right');
 left.onclick = function () {
     left.setAttribute("style", "border-right: 60px solid var(--buzz-color-4);");
     right.setAttribute("style", "border-left: 60px solid var(--buzz-color-3);");
+    document.getElementById("buzz-24s").innerHTML = 24;
+    tanCong24s();
 }
 
 
 right.onclick = function () {
     left.setAttribute("style", "border-right: 60px solid var(--buzz-color-3);");
     right.setAttribute("style", "border-left: 60px solid var(--buzz-color-4);");
+    document.getElementById("buzz-24s").innerHTML = 24;
+    tanCong24s();
 }
 
-const checkDongHo = document.getElementById('chk-dongho');
-
-checkDongHo.onclick = function chayTranDau() {
-    if (!checkDongHo) {
-        tamDungTranDau();
-    }
-    else {
-        thoiGianTranDau();
-    }
-}
