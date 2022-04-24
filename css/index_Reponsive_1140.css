@@ -1,0 +1,29 @@
+@media screen and (max-width : 1140px) {
+    .buzz-item-team {
+        font-size: 150px;
+    }
+    .buzz-team-name {
+        font-size: 35px;
+    }
+    .h-90{
+        height: 80vh;
+    }
+
+
+
+    /* mid */
+    .buzz-btn-time {
+        font-size: 120px;
+    }
+
+    .buzz-btn-24s {
+        font-size: 90px;
+    }
+    .buzz-period {
+        font-size: 25px;
+    }
+
+
+
+    
+}

@@ -7,11 +7,15 @@ function getInputNumber(id){
 function handleClickBtn(id) {
     let btn = document.getElementById(id);
     let inputBtn = document.getElementById("chk-"+id);
+
+
+    btn.onclick = function (){
+        btn.classList.add('buzz-btn-click');
+    }
     btn.ondblclick = function () {
-        inputBtn.click();
-        if(inputBtn.checked)
-            btn.classList.add('buzz-btn-click');
-        else btn.classList.remove('buzz-btn-click');
+        
+        
+        btn.classList.remove('buzz-btn-click');
     }
 }
 
@@ -25,8 +29,8 @@ function getListHomeNumber(position) {
     let s = '';
     for (let i = 0; i < 5; i++) {
         let temp = i + 1;
-        let inputBtnNumber = getInputNumber(`btn-home-number${position}-${i}`);
-        s = s + ` <button id="btn-home-number${position}-${i}" class="buzz-btn">${temp}</button> ` + inputBtnNumber;
+        // let inputBtnNumber = getInputNumber(`btn-home-number${position}-${i}`);
+        s = s + ` <button id="btn-home-number${position}-${i}" class="buzz-btn">${temp}</button> ` ;
     }
     return s;
 }
@@ -41,8 +45,8 @@ function getList60s(position) {
 
         }
         else {
-            let inputBtnNumber = getInputNumber(`btn-60s${position}-${i}`);
-            s = s + `<button id="btn-60s${position}-${i}" class="buzz-btn ">60s</button>` + inputBtnNumber;
+            // let inputBtnNumber = getInputNumber(`btn-60s${position}-${i}`);
+            s = s + `<button id="btn-60s${position}-${i}" class="buzz-btn ">60s</button>` ;
         }
 
     }
