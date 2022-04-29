@@ -17,10 +17,13 @@
     }
 
     .buzz-btn-24s {
-        font-size: 90px;
+        font-size: 85px;
     }
     .buzz-period {
         font-size: 25px;
+    }
+    .buzz-h-24s {
+        height: 70%;
     }
 
 
