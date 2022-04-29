@@ -18,6 +18,13 @@ function chayTranDau() {
             thoiGianTranDau();
         }
         else {
+            if (thoiLuong <= 24) {
+                thoiLuongTanCong = thoiLuong;
+                thoiLuongTanCong = thoiLuongTanCong < 10 ? "0" + thoiLuongTanCong : thoiLuongTanCong;
+                document.getElementById("buzz-24s").innerHTML = thoiLuongTanCong;
+
+
+            }
             tamDungTranDau();
             tamDungTanCong();
         }
@@ -57,6 +64,9 @@ function demNguoc() {
     if (thoiLuong == 0) {
         periodNumber += 1;
         document.getElementById('period-stop').innerHTML = periodNumber;
+        document.getElementById('soPhut').innerHTML = 10;
+        document.getElementById('soGiay').innerHTML = "00";
+        sound.play();
     }
 }
 var thoiLuongTanCong = 0;
@@ -79,6 +89,7 @@ function demNguocTanCong() {
         stopWatchTanCong = setTimeout(demNguocTanCong, 1000);
     if (thoiLuongTanCong == 0) {
         tamDungTranDau();
+        sound.play();
         document.getElementById("buzz-24s").innerHTML = 24;
     }
 
@@ -140,3 +151,10 @@ right.onclick = function () {
 
 }
 
+var btnBell = document.getElementById('btn-bell');
+var sound = new Audio();
+sound.src = "..//assets/sound/buzzer_beater.mp3"
+btnBell.onclick = function buzzer_beater() {
+    sound.play();
+
+}

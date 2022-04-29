@@ -7,15 +7,15 @@ function getInputNumber(id) {
 function handleClickBtn(id) {
     let btn = document.getElementById(id);
 
-    let inputBtn = document.getElementById("chk-"+id);
+    let inputBtn = document.getElementById("chk-" + id);
 
 
-    btn.onclick = function (){
+    btn.onclick = function () {
         btn.classList.add('buzz-btn-click');
     }
     btn.ondblclick = function () {
-        
-        
+
+
         btn.classList.remove('buzz-btn-click');
 
     }
@@ -32,7 +32,7 @@ function getListHomeNumber(position) {
     for (let i = 0; i < 5; i++) {
         let temp = i + 1;
         // let inputBtnNumber = getInputNumber(`btn-home-number${position}-${i}`);
-        s = s + ` <button id="btn-home-number${position}-${i}" class="buzz-btn">${temp}</button> ` ;
+        s = s + ` <button id="btn-home-number${position}-${i}" class="buzz-btn">${temp}</button> `;
     }
     return s;
 }
@@ -48,7 +48,7 @@ function getList60s(position) {
         }
         else {
             // let inputBtnNumber = getInputNumber(`btn-60s${position}-${i}`);
-            s = s + `<button id="btn-60s${position}-${i}" class="buzz-btn ">60s</button>` ;
+            s = s + `<button id="btn-60s${position}-${i}" class="buzz-btn ">60s</button>`;
         }
 
     }
@@ -58,6 +58,8 @@ function getList60s(position) {
 function clickList60s(position) {
     for (let i = 0; i < 5; i++) {
         handleClickBtn(`btn-60s${position}-${i}`);
+        // tamDungTranDau();
+        //tamDungTanCong();
 
     }
 }
