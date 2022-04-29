@@ -1,0 +1,75 @@
+@media screen and (max-width : 855px) {
+    .buzz-item-team {
+        font-size: 100px;
+    }
+
+    .h-90 {
+        height: 60vh;
+    }
+
+    .buzz-btn-check {
+        width: 30px;
+        height: 18px;
+    }
+
+    .buzz-chk-circle {
+        width: 12px;
+        height: 12px;
+    }
+
+    .buzz-btn {
+        height: 3vw;
+        width: 3vw;
+        font-size: 14px;
+    }
+
+    .buzz-btn-2 {
+        height: 2.5vw;
+        width: 2.5vw;
+        font-size: 10px;
+    }
+
+    .buzz-btn-3 {
+        height: 2vw;
+        width: 2vw;
+        font-size: 10px;
+    }
+
+    .buzz-h-40 {
+        height: 200px;
+    }
+
+
+    /* mid */
+    .buzz-btn-time {
+        font-size: 90px;
+    }
+
+    .buzz-btn-24s {
+        font-size: 50px;
+    }
+
+    .buzz-period {
+        font-size: 20px;
+    }
+
+    #buzz-btn-reset {
+        font-size: 17px;
+    }
+
+    #buzz-btn-14s {
+        font-size: 17px;
+    }
+
+    .buzz-btn-attack-right {
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 30px solid rgb(187, 205, 247);
+    }
+
+    .buzz-btn-attack-left {
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 30px solid rgb(187, 205, 247);
+    }
+}
