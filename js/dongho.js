@@ -78,6 +78,7 @@ function tanCong24s() {
 
 }
 
+
 function demNguocTanCong() {
     thoiLuongTanCong--;
     soGiay = thoiLuongTanCong % 60;
@@ -85,6 +86,9 @@ function demNguocTanCong() {
     //dien vao so giay 
     document.getElementById("buzz-24s").innerHTML = soGiay;
 
+    if (thoiLuongTanCong < 11) {
+        //stopWatchTanCong = setTimeout(demNguocTanCong, 10000)
+    }
     if (thoiLuongTanCong > 0)
         stopWatchTanCong = setTimeout(demNguocTanCong, 1000);
     if (thoiLuongTanCong == 0) {
@@ -158,3 +162,6 @@ btnBell.onclick = function buzzer_beater() {
     sound.play();
 
 }
+
+
+
